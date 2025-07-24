@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: ip_streamer_nordic_adrian
+Version: 0.0.1
+Summary: IP stream from webcam or file using open cv
+Author-email: Adrian Hjertholm Voldseth <adrian@nordicneurolab.com>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opencv-python>=4.12
+Requires-Dist: Flask>=3.1
+Dynamic: license-file

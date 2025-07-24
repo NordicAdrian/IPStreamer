@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/ip_streamer_nordic_adrian/__init__.py
+src/ip_streamer_nordic_adrian/ip_streamer.py
+src/ip_streamer_nordic_adrian.egg-info/PKG-INFO
+src/ip_streamer_nordic_adrian.egg-info/SOURCES.txt
+src/ip_streamer_nordic_adrian.egg-info/dependency_links.txt
+src/ip_streamer_nordic_adrian.egg-info/requires.txt
+src/ip_streamer_nordic_adrian.egg-info/top_level.txt
