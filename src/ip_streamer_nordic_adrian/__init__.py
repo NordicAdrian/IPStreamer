@@ -1,4 +1,4 @@
-from .ip_streamer import IPStreamer
+from .ip_streamer import run_ip_stream
 
 
-__all__ = ['IPStreamer']
+__all__ = ['run_ip_stream']

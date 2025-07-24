@@ -12,3 +12,12 @@ License-File: LICENSE
 Requires-Dist: opencv-python>=4.12
 Requires-Dist: Flask>=3.1
 Dynamic: license-file
+
+# IP Streamer
+
+
+### 1 - Installation 
+
+```
+pip install git+https://github.com/NordicAdrian/IPStreamer.git
+```
