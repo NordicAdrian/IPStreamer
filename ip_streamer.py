@@ -1,9 +1,9 @@
 import cv2
 from flask import Flask, Response
 import time
+import sys
 
-
-STREAM = "C:\\Users\\adria\\dev\\nordic3DET\\data\\Eye_Rec_Asgeir.avi" # Path to the video file or an int for webcam index
+STREAM = 0 # Path to the video file or an int for webcam index
 app = Flask(__name__)
 
 def generate_frames(cap: cv2.VideoCapture):
@@ -25,25 +25,19 @@ def generate_frames(cap: cv2.VideoCapture):
     cap.release()    
 
 
-@app.route('/video_feed')
-def video_feed():
+@app.route('/')
+def index():
     return Response(generate_frames(cv2.VideoCapture(STREAM)),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/')
-def index():
-    return '''
-    <html>
-      <body>
-        <h1>IP Camera Stream</h1>
-        <img src="/video_feed">
-      </body>
-    </html>
-    '''
+
 
 
 if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        STREAM = sys.argv[1]  # Allow passing the video source as a command line argument
     app.run(host='0.0.0.0', port=5000, debug=False)
 
 
-#http://127.0.0.1:5000/video_feed
+
+#http://127.0.0.1:5000
