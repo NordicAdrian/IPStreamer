@@ -3,6 +3,15 @@ from flask import Flask, Response
 import time
 import sys
 from typing import Union
+import click
+
+
+
+
+@click.group()
+def cli():
+    pass
+
 
 
 
@@ -84,19 +93,7 @@ class IPStreamer:
 
 
 
-def run_ip_stream(*args, **kwargs):
-    """
-    Main function to run the IPStreamer.
-    """
-    if len(args) > 0:
-        stream = args[0]  # Allow passing the video source as a command line argument
-    else:
-        print("No video source provided, defaulting to webcam (0).")
-        stream = 0  # Default to webcam if no argument is provided
 
-
-    ip_streamer = IPStreamer(stream)
-    ip_streamer.run()
 
 
 

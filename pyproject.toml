@@ -13,7 +13,8 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "opencv-python>=4.12",
-    "Flask>=3.1"
+    "Flask>=3.1",
+    "click>=8.2"
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -21,4 +22,7 @@ classifiers = [
 ]
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
+
+[project.scripts]
+ipstream = "ip_streamer_nordic_adrian:cli"
 

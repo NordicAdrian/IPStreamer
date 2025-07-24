@@ -1,0 +1,2 @@
+[console_scripts]
+ipstream = ip_streamer_nordic_adrian:cli
